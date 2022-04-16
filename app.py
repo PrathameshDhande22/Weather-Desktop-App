@@ -1,3 +1,4 @@
+import configparser
 from tkinter import *
 from tkinter import messagebox
 from PIL import Image,ImageTk
@@ -6,8 +7,9 @@ import requests
 import datetime
 import pytz
 from timezonefinder import TimezoneFinder
-import Pmw
 
+'''Author: prathamesh Dhande
+If you find any error in this code then you can contact me prathameshdhande534@gmail.com'''  
 
 class Weather(Tk):
     def __init__(self):
@@ -119,9 +121,10 @@ class Weather(Tk):
         try:
             # getting the weather information
             city=self.search.get()
-            api_key='82acb32d80cce7ab719b410dbb85eba4'
-
-            data=f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}'
+            config_file=configparser.ConfigParser()
+            config_file.read("config.ini")
+            api=config_file['Openweather']['api']
+            data=f'https://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}'
             weather=requests.get(data).json()
             self.__set_information(weather=weather)
 
