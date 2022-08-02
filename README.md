@@ -1,6 +1,7 @@
 # Weather-App-Using-python-Tkinter
 
-![weather](https://img.shields.io/badge/GUI-Tkinter-orange?style=flat-square&logo=python) ![weather](https://img.shields.io/badge/API-openweather-blue?style=flat-square&logo=api)
+![weather](https://img.shields.io/badge/GUI-Tkinter-orange?style=flat-square&logo=python) 
+![weather](https://img.shields.io/badge/API-openweather-blue?style=flat-square&logo=api)
 
 ## About:
 This app uses the Open weather Api to get the data of the weather. </br>
